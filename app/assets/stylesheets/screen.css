@@ -1,0 +1,11 @@
+html, body {
+  height: 100%;
+}
+
+.bottom-controls {
+  float: center;
+  margin: auto;
+  position: sticky;
+  top: 90%;
+  text-align: center;
+}

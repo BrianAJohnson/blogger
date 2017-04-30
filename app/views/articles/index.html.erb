@@ -1,0 +1,23 @@
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>Articles</h1>
+
+  </div>
+</div>
+<section class="container">
+  <%# Loop throught articles and print out titles %>
+  <% @articles.each do |article| %>
+  <div class="row">
+    <h3 class="col-md-6 text-center">
+      <%= link_to article.title, article_path(article) %>
+    </h3>
+    <h4 class="col-md-6 pull-right">
+      ' <%= article.body[0..180] %> ...'
+    </h4>
+  </div>
+  <% end %>
+</section>
+<footer class="bottom-controls">
+<%# Adds new article link to page %>
+<%= link_to "Create new Article", new_article_path, class: 'new_article btn btn-primary btn-lg ' %>
+</footer>
