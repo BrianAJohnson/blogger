@@ -1,6 +1,9 @@
 html, body {
   height: 100%;
 }
+.txt-lg {
+    font-size: 1.5em;
+}
 
 .bottom-controls {
   float: center;
@@ -8,4 +11,13 @@ html, body {
   position: sticky;
   top: 90%;
   text-align: center;
+}
+
+.height-twenty {
+  min-height: 200px;
+}
+
+
+.height-max {
+  min-height: 100%;
 }

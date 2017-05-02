@@ -1,0 +1,27 @@
+<section class="container text-center">
+  <%= form_for @article do |f| %>
+    <h3>
+      <%= f.label :title %>
+    </h3>
+
+    <p>
+      <%= f.text_field :title, class: "text-center form-control txt-lg" %>
+    </p>
+
+    <br>
+
+    <h3>
+      <%= f.label :body %>
+    </h3>
+    <p>
+      <%= f.text_area :body, class: "text-center form-control height-twenty txt-lg" %>
+    </p>
+
+    <%= f.submit "Submit", class: "btn btn-primary btn-lg" %>
+  <% end %>
+</section>
+
+
+<footer class=" bottom-controls">
+  <%= link_to "Back to Articles", articles_path, class: "btn btn-primary btn-lg" %>
+</footer>

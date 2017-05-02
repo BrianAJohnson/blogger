@@ -11,9 +11,13 @@
     <h3 class="col-md-6 text-center">
       <%= link_to article.title, article_path(article) %>
     </h3>
-    <h4 class="col-md-6 pull-right">
-      ' <%= article.body[0..180] %> ...'
-    </h4>
+    <h3 class="col-md-6 pull-right">
+      <% size = 180%>
+      <% if article.body.length < size %>
+      <% size = article.body.length %>
+      <% end %>
+      ' <%= article.body[0..size] %> ...'
+    </h3>
   </div>
   <% end %>
 </section>
