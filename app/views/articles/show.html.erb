@@ -7,16 +7,22 @@
   </div>
 </div>
 
-<section class="container">
+<section class="container text-center">
 
   <p class="txt-lg"><%= @article.body %></p>
   <br>
   <hr>
   <br>
-  <% @article.comments.each do |comment| %>
-  <h4>Comment by: <%= comment.author_name %></h4>
-  <p><%= comment.body %></p>
-  <% end %>
+  <div class="col-lg-6">
+    <%= render partial: 'comment/form' %>
+  </div>
+  <div class="container col-lg-6">
+
+    <% @article.comments.each do |comment| %>
+    <h4>Comment by: <%= comment.author_name %></h4>
+    <p><%= comment.body %></p>
+    <% end %>
+  </div>
 </section>
 
 <footer class="bottom-controls">
