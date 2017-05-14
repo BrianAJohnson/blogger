@@ -1,5 +1,8 @@
 html, body {
-  height: 100%;
+  position:sticky;
+  margin: 0;
+  padding: 0;
+  height: 99%;
 }
 .txt-lg {
     font-size: 1.5em;
@@ -20,4 +23,8 @@ html, body {
 
 .height-max {
   min-height: 100%;
+}
+
+.jumbotron {
+
 }
